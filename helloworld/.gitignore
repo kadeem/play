@@ -1,9 +1,9 @@
 logs
-project
+project/project
+project/target
 target
 tmp
 .history
-README
-.project
 .classpath
 .settings
+.project
