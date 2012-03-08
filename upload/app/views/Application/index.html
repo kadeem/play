@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<ul>
+#{list items:models.Picture.findAll(), as:'picture'}
+    <li>${picture.id} <img src="@{Application.getPicture(picture.id)}" /></li>
+#{/list}
+</ul>
+
+#{form @Application.uploadPicture(), enctype:'multipart/form-data'}
+
+    <input type="file" name="picture.image" />
+    <input type="submit" name="submit" value="Save" />
+#{/form}
