@@ -1,0 +1,85 @@
+#{extends 'main.html' /}
+#{set 'title'}
+	eazyBookmark - ${user}
+#{/set}
+
+
+<div id="add-link-form">
+#{form @Profile.addlink() }
+    <label>Link</label>
+    <input type="text" class="forminput" id="url-textbox" name="url" />
+    <label>Tags <span class="op">(Optional) (<a href="javascript:" id="tags-link">show</a>)</span>  </label>
+    <div id="tag-form">
+    	<p>Comma seprated tag names e.g. news, technical, travel, leisure</p>
+	    <input type="text" class="forminput" name="tags" />
+    </div>
+
+    <input class="mainbutton" type="submit" name="submit" value="Save bookmark" />
+<br/><br/>
+#{/form}
+</div>
+
+<div id="leftbar">
+<div id="links">
+	#{list items:links, as:'link'}
+	<div class="link">
+		<img align="left" src="http://www.google.com/s2/favicons?domain=${link.url.domain()}" width="16px" height="16px" border="0"/>
+		#{if link.title}
+		&nbsp;<a href="${link.url}">${link.title}</a></span>
+		<p style="color:#00B306;margin:3px 0px;font-size:90%">${link.url.domain()}</p>
+		#{/if}
+		#{else}
+		&nbsp;<span class="alink"><a href="${link.url}">${link.url}</a></span>
+		#{/else}
+
+		<p style="margin:3px 0px;">${link.description}</p>
+
+		<div class="editremove">
+			<a href="@{Profile.editlink(link.id)}" title="Edit this link">edit</a>
+			|
+			<a href="@{Profile.removeLink(link.id)}"
+				onclick="return confirm('Are you sure you want to remove this link?')"
+				title="Remove this link">remove</a>
+		</div>
+		<div class="taglist ">
+		#{list items: link.findTagsByLink(), as: 'tag'}
+			<a href="@{Profile.index(tag.name)}" class="tag" title="Click to see all links with tag '${tag}'">${tag}</a>
+		#{/list}
+		</div>
+	</div>
+	#{/list}
+	#{else}
+		<p>No links added yet!</p>
+	#{/else}
+</div>
+</div>
+<div id="rightbar" style="text-align:right">
+&nbsp;
+#{if tags}
+Tags
+#{/if}
+#{list items:tags, as:'tag'}
+<br/>
+&nbsp;&nbsp;&nbsp;<a href="@{Profile.index(tag.name)}" class="tag" title="Click to see all links with tag '${tag}'">${tag.name}</a>
+#{/list}
+
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#tags-link").click(function() {
+
+		if($(this).text() == "show") {
+			$(this).text("hide");
+		} else {
+			$(this).text("show");
+		}
+		$("#tag-form")
+			.slideToggle()
+			.find("input").focus();
+	});
+
+});
+</script>

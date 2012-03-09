@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'eazyBookmark - Synchronize bookmarks easily' /}
+
+<center>
+<table width="500px">
+<tr>
+	<td width="250px">
+		<p><em>eazyBookmark</em> is an easy way to save your bookmarks. Now you dont have to remember passwords, login directly using your
+		Google account. eazyBookmark uses <a href="http://en.wikipedia.org/wiki/OpenID" rel="nofollow" target="_blank">OpenID</a> to authenticate users. It's safe and we do not store your login information.
+		</p>
+	</td>
+	<td width="250px" align="right">
+		<div id="welcome">
+			<a href="@{Application.login()}">Login using your Google Account</a>
+		</div>
+	</td>
+</tr>
+</table>
+</center>
+

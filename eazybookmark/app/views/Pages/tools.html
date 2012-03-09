@@ -1,0 +1,18 @@
+#{extends 'main.html' /}
+#{set 'title'}
+	Tools | eazyBookmark
+#{/set}
+
+
+<h3>Standard eazyBookmark Bookmarklet</h2>
+<br/>
+<p>
+The <strong>eazyBookmark Bookmarklet</strong> allows you to add the current webpage from your browser window directly to your eazyBookmark
+ profile. This way you can keep track of any bookmark easily and access them anywhere.
+</p>
+<br/>
+<p>Drag this to your browser toolbar to get started or right click and Add to favourite: <a href="javascript:(function(){var%20u='http://eazybookmark.appspot.com/profile/addlink?url='+escape(document.location.href);var%20a=function(){if(!window.open(u))location.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})();">Add to eazyBookmark</a>
+</p>
+<br/>
+<img src="/public/images/eazybookmarklet-example-screenshot.png" align="center"/>
+<br/>

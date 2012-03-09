@@ -1,0 +1,235 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+body {
+	margin: 0px; 
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 14px;
+} 
+#pagewidth{ }
+#headerbar {
+	background-color:#eee; 
+	width:100%;
+	display:block;
+	overflow:auto;
+	position:relative; 
+	height:30px; 
+	font-size:12px;
+}
+#headerbar #headerlink {
+	text-align:right;
+	padding:4px 0px;
+}
+#headerbar #headerlink a{
+	text-decoration:none;
+}
+#headerbar .sep {
+	color:#bbb;
+	padding:0px 4px;
+	font-size:15px;
+}
+#header{
+	position:relative; 
+	height:50px; 
+	background-color:#fff; 
+	width:100%;
+	display:block;
+	overflow:auto;
+} 
+#headerbar #logo {
+	float:left;
+	margin:7px 0px;
+}
+#headerbar #logo a{
+	text-decoration:none;
+}
+#header #hmenus {
+	float:left;
+	margin-top: 0px;
+	padding: 0px 0px 0px 10px;
+	width: 400px;
+	text-align:right;
+}
+#headercol {
+	width: 800px;
+	margin:auto;
+ }
+#maincol{
+	 background-color: #fffff;  
+	 position: relative; 
+	 min-height: 500px;
+	 width: 800px;
+	margin: auto;
+ }
+ 
+#footer{
+	height:20px; 
+	background-color:#FFFFFF; 
+	clear:both;
+	display:block;
+	text-align:center;
+	font-size:11px;
+	margin-top:30px;
+ } 
+.success {
+ 	background-color: #EDFFE0;
+	color: #409E00;
+	width:500px;
+	padding:5px;
+	margin:5px;
+}
+ 
+.error {
+	background-color: #FFE9E6;
+	color: #E65C49;
+	width:500px;
+	padding:5px;
+	margin:5px;
+}
+ 
+ 
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+ }
+ 
+.clearfix{display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+.clearfix{display: block;}
+/* End hide from IE-mac */  
+
+a, a:visited {
+	color: #1272B5;
+}
+a.tag {
+	background-color:#E0EAF1;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	corner-radius: 5px;
+	border:1px solid #E0EAF1;
+	color:#3E6D8E;
+	font-size:90%;
+	line-height:2.4;
+	margin:2px 2px;
+	padding:2px 4px;
+	text-decoration:none;
+	white-space:nowrap;
+	font-size: 12px;
+}
+a.tag:hover {
+	text-decoration: none;
+	color: #7F9FB6;
+}
+
+.link {
+	min-height: 40px;
+	border-bottom:1px dashed #999;
+	display:block;
+	padding: 10px 2px;
+	margin: 4px 0px;
+}
+
+.right {
+	float: right;
+}
+
+#leftbar {
+	float: left;
+	width:500px;
+}
+#rightbar {
+	float:left;
+	width:300px;
+	background-color:#fff;
+}
+
+#url-textbox, .forminput {
+	font-size: 20px;
+	height:25px;
+	width:500px;
+	border:3px solid #ADCADE;
+	padding:2px;
+}
+
+/***************************************************/
+#tagbox { width:500px; min-height:25px; padding:3px 3px 0; border:3px solid #ADCADE; background-color:#fff; cursor:text;  padding:2px;}
+#taglist { width:150px; height:22px; margin:0 0 2px 0; padding:0 0 3px; position:relative; top:0; float:left; border:none; font-size:20px;  border-width:0px;}
+#tagbox span { display:block; width:auto; margin:0 3px 3px 0; padding:3px 20px 4px 8px; position:relative; float:left; text-indent:0; background-color:#E0EAF1; border:1px solid #3E6D8E; -moz-border-radius:7px; -webkit-border-radius:7px; border-radius:7px; color:#3E6D8E; font:normal 12px Verdana, Sans-serif; }
+#tagbox span a { position:absolute; right:8px; top:2px; color:#3E6D8E; font:bold 12px Verdana, Sans-serif; text-decoration:none; cursor:hand; curson:pointer; }
+#tagbox span a:hover { color:#ff0000; }
+.ui-menu .ui-menu-item { white-space:nowrap; padding:0 10px 0 0; }
+/***************************************************/
+
+
+#add-link-form label {
+	display: block;
+	font-weight: bold;
+	font-size:14px;
+	color:#222;
+	margin-top: 7px;
+	margin-bottom: 2px;
+}
+#add-link-form textarea {
+	width:500px;
+	height: 60px;
+	border:3px solid #ADCADE;
+	padding:2px;
+	font-family: sans-serif;
+	font-size: 14px;	
+}
+#add-link-form label .op {
+	display: inline;
+	color: #888;
+	font-weight: normal;
+}
+#add-link-form #tag-form {
+	color: #888;
+	font-size:90%;
+	display:none;
+}
+
+input[type="text"], input[type="password"], textarea, select, img { 
+    outline: none;
+}
+
+.taglist {
+	text-align:right;
+}
+
+.link .atitle {
+	margin:0px 0px 2px 0px;
+}
+.editremove {
+	color: #bbb;
+	font-size:10px;
+}
+.editremove a {
+	color: #888;
+	text-decoration:none;
+}
+
+ul#menu {
+	list-style:none;
+	margin:10px 0px;
+}
+ul#menu li {
+	display: inline;
+}
+ul#menu li a {
+	border: 1px solid;
+	text-decoration: none;
+}
+
+.mainbutton {
+	margin-top:5px;
+}

@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set 'title'}
+	${user} - Edit Profile | eazyBookmark
+#{/set}
+
+<h2>Edit User Profile</h2>
+
+<br/><br/>
+
+<div id="add-link-form">
+
+#{form @Profile.edit(user.id) }
+    <label>Email</label>
+    <h4>${user.email}</h4>
+<br/>
+
+    <label>Display Name</label>
+    <input type="text" class="forminput" name="user.name" value="${user?.name}"/>
+<br/>
+    <input class="mainbutton" type="submit" name="submit" value="Save Profile" />
+<br/>
+#{/form}
+</div>

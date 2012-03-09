@@ -1,0 +1,26 @@
+package controllers;
+
+import models.User;
+
+public class Auth {
+
+	public static boolean isLoggedIn() {
+		return true;
+	}
+	public static String getEmail() {
+		return "viral.dadhania@gmail.com";
+	}
+
+	public static User getUser() {
+		return new User();
+	}
+
+    public static void login(String action) {
+        Application.login();
+    }
+
+    public static void logout(String action) {
+        Application.login();
+    }
+
+}

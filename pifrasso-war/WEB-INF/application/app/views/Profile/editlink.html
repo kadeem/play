@@ -1,0 +1,30 @@
+#{extends 'main.html' /}
+#{set 'title'}
+	Edit Bookmark - ${link.title} | eazyBookmark
+#{/set}
+
+
+<h2>Edit Bookmark</h2>
+
+<br/>
+<div id="add-link-form">
+#{form @Profile.editLink(link.id) }
+    <label>Link</label>
+    <input type="text" class="forminput" name="link.url" value="${link.url}" disabled="disabled"/>
+
+    <label>Title</label>
+    <input type="text" class="forminput" name="link.title" value="${link?.title}"/>
+
+    <label>Tags</label>
+    <div id="tag-form" style="display:block">
+    	<p>Comma seprated tag names e.g. news, technical, travel, leisure</p>
+	    <input type="text" class="forminput" name="link.tags" value="${tags.join(', ')}"/>
+	</div>
+
+    <label>Description</label>
+    <textarea class="forminput" name="link.description">${link?.description}</textarea>
+<br/>
+    <input class="mainbutton" type="submit" name="submit" value="Save bookmark" /> or <a href="@{Profile.index()}">cancel</a>
+<br/>
+#{/form}
+</div>
